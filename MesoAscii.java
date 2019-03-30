@@ -15,6 +15,13 @@ public class MesoAscii extends MesoAsciiAbstract
 	
 	public int calAverage()
 	{
-		return 0;
+		int sumValues=0;
+		double rawAverage;
+		double numValues=4.0;
+		for(int i = 0;i<code.length;i++) {
+			sumValues += (int)code[i];
+		}
+		rawAverage = sumValues/numValues;
+		return (int)Math.round(rawAverage);
 	}
 }
