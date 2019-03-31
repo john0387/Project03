@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MesoEqual extends MesoSortedAbstract
+public class MesoEqual
 {
 	String id;
 	ArrayList<String> IDlist = new ArrayList<String>();
@@ -37,13 +37,14 @@ public class MesoEqual extends MesoSortedAbstract
         BR.close();
     }
 	
-	public Map<String, Integer> sortedMap(HashMap<String, Integer> unsorted)
+	public Map<String, Integer> calAsciiEqual()
 	{
+		Map<String, Integer> unsorted = new HashMap<String, Integer>();
+		MesoAscii Asciiavg = new MesoAscii(new MesoStation(id));
+		int ave = Asciiavg.calAverage();
+		unsorted.put(id,ave);
+		
 		return unsorted;
-	}
-	
-	public int calAsciiEqual()
-	{
-		return 0;
+		
 	}
 }
