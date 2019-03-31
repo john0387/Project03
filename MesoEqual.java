@@ -43,7 +43,13 @@ public class MesoEqual
 		MesoAscii Asciiavg = new MesoAscii(new MesoStation(id));
 		int ave = Asciiavg.calAverage();
 		unsorted.put(id,ave);
-		
+		for(int i=0;i<IDlist.size();i++)
+		{
+			if(new MesoAscii(new MesoStation(IDlist.get(i))).calAverage()==ave)
+			{
+				unsorted.put(IDlist.get(i), ave);
+			}
+		}
 		return unsorted;
 		
 	}
