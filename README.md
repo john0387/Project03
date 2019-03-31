@@ -13,4 +13,4 @@ same ascii average
 5. With the hashmap made in step 4, sort the ascii IDs in alphabetical 
 order using a method made in StationLexicographical.java
 
-6. profit!
+6. profit!!
