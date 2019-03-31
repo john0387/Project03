@@ -1,5 +1,5 @@
 import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class StationLexicographical extends MesoSortedAbstract
 {
@@ -8,13 +8,31 @@ public class StationLexicographical extends MesoSortedAbstract
 		sortedMap(unsorted);
 	}
 	
-	public Map<String, Integer> sortedMap(HashMap<String, Integer> unsorted)
+	public HashMap<String, Integer> sortedMap(HashMap<String, Integer> unsorted)
 	{
-		Map<String, Integer> sorted = new HashMap<String, Integer>();
-		/*for(int i=0;i<4;i++) {
-			if(first.substring(i,i+1).compareToIgnoreCase(second.substring(i,i+1))!=0) {
-				HamFirstSecond++;
-			}*/
+		String temp;
+		ArrayList<String> UnsortedIDlist = new ArrayList<String>();
+		ArrayList<String> SortedIDlist = new ArrayList<String>();
+		HashMap<String, Integer> sorted = new HashMap<String, Integer>();
+		for ( String key : unsorted.keySet() ) {
+		    UnsortedIDlist.add(key);
+		}
+		for(int i=0;i<UnsortedIDlist.size();i++)
+		{
+			temp = UnsortedIDlist.get(i);
+			if(temp.compareTo(UnsortedIDlist.get(i+1))>0) {
+				temp = UnsortedIDlist.get(i+1);
+			}
+			SortedIDlist.add(temp);
+		}
+		
+		for(int i=0;i<SortedIDlist.size();i++) 
+		{
+			if(unsorted.containsKey(SortedIDlist.get(i))==true)
+			{
+				sorted.put(SortedIDlist.get(i), unsorted.get(SortedIDlist.get(i)));
+			}
+		}
 		return sorted;
 	}
 }
