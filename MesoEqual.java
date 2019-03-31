@@ -3,7 +3,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class MesoEqual
 {
@@ -37,9 +36,9 @@ public class MesoEqual
         BR.close();
     }
 	
-	public Map<String, Integer> calAsciiEqual()
+	public HashMap<String, Integer> calAsciiEqual()
 	{
-		Map<String, Integer> unsorted = new HashMap<String, Integer>();
+		HashMap<String, Integer> unsorted = new HashMap<String, Integer>();
 		MesoAscii Asciiavg = new MesoAscii(new MesoStation(id));
 		int ave = Asciiavg.calAverage();
 		unsorted.put(id,ave);
