@@ -1,7 +1,20 @@
-public class StationLexicographical extends MesoAsciiAbstract
+import java.util.HashMap;
+import java.util.Map;
+
+public class StationLexicographical extends MesoSortedAbstract
 {
-	public int calAverage()
+	public StationLexicographical(HashMap<String, Integer> unsorted)
 	{
-		return 0;
+		sortedMap(unsorted);
+	}
+	
+	public Map<String, Integer> sortedMap(HashMap<String, Integer> unsorted)
+	{
+		Map<String, Integer> sorted = new HashMap<String, Integer>();
+		/*for(int i=0;i<4;i++) {
+			if(first.substring(i,i+1).compareToIgnoreCase(second.substring(i,i+1))!=0) {
+				HamFirstSecond++;
+			}*/
+		return sorted;
 	}
 }
