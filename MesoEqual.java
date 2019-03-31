@@ -30,7 +30,7 @@ public class MesoEqual
         line = BR.readLine();
         line = BR.readLine();
         while(line!=null) {
-        	IDlist.add(line.substring(1,5));
+        	IDlist.add(line.substring(2,6));
         	line = BR.readLine();        		
         }
         BR.close();
