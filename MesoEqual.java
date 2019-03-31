@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MesoEqual
@@ -10,7 +11,20 @@ public class MesoEqual
 	public MesoEqual(String StID)
 	{
 		id = StID;
-		BufferedReader BR = new BufferedReader(new FileReader(Mesonet.txt));
+		try
+    	{
+    		read("Mesonet.txt");
+    	}
+    	catch(IOException e)
+    	{
+    		System.out.println("Error reading from file!\n");
+    		e.printStackTrace();
+    	}
+	}
+	
+	public void read(String filename) throws IOException
+    {
+    	BufferedReader BR = new BufferedReader(new FileReader(filename));
         String line = BR.readLine();
         line = BR.readLine();
         line = BR.readLine();
@@ -19,7 +33,7 @@ public class MesoEqual
         	line = BR.readLine();        		
         }
         BR.close();
-	}
+    }
 	
 	public int calAsciiEual()
 	{
