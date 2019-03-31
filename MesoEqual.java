@@ -2,8 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-public class MesoEqual
+public class MesoEqual extends MesoSortedAbstract
 {
 	String id;
 	ArrayList<String> IDlist = new ArrayList<String>();
@@ -35,7 +37,12 @@ public class MesoEqual
         BR.close();
     }
 	
-	public int calAsciiEual()
+	public Map<String, Integer> sortedMap(HashMap<String, Integer> unsorted)
+	{
+		return unsorted;
+	}
+	
+	public int calAsciiEqual()
 	{
 		return 0;
 	}
