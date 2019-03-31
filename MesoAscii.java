@@ -2,7 +2,6 @@ public class MesoAscii extends MesoAsciiAbstract
 {
 	char[] code = new char[4];
 	String id;
-	char aveC;
 	
 	public MesoAscii(MesoStation MS)
 	{
