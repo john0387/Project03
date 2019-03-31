@@ -17,11 +17,11 @@ public class StationLexicographical extends MesoSortedAbstract
 		for ( String key : unsorted.keySet() ) {
 		    UnsortedIDlist.add(key);
 		}
-		for(int i=0;i<UnsortedIDlist.size();i++)
+		for(int i=1;i<UnsortedIDlist.size();i++)
 		{
-			temp = UnsortedIDlist.get(i);
-			if(temp.compareTo(UnsortedIDlist.get(i+1))>0) {
-				temp = UnsortedIDlist.get(i+1);
+			temp = UnsortedIDlist.get(0);
+			if(temp.compareTo(UnsortedIDlist.get(i-1))>0) {
+				temp = UnsortedIDlist.get(i-1);
 			}
 			SortedIDlist.add(temp);
 		}
